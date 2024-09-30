@@ -13,8 +13,8 @@
 #'
 #' @examples
 #' saleOutUI()
-saleOutUI <- function(tabTitle ='销售出库',
-                   colTitles =c('数据同步','中台查询','显示区域'),
+saleOutUI <- function(tabTitle ='销售出库同步',
+                   colTitles =c('操作区域','操作区域','显示区域'),
                    widthRates =c(6,6,12),
                    func_left = saleOutUI_left,
                    func_right =saleOutUI_right,
@@ -69,11 +69,20 @@ saleOutUI_left <- function() {
 saleOutUI_right <- function() {
   res <- tagList(
 
+
+
+
     tsui::mdl_text2(id = 'txt_saleOut_fbillno_view',label = '单据编号',value = ''),
-    shiny::actionButton(inputId = 'btn_saleOut_fbillno_view_dms',label = '按单据编号查询'),
-    tsui::mdl_date(id = 'date_tm_saleOut'),
+    tsui::layout_2C(x=shiny::actionButton(inputId = 'btn_saleOut_fbillno_view_dms',label = '按单据编号查询'),
+                    y = tsui::mdl_download_button(id = 'dl_saleOut_fbillno_dms',label = '下载查询数据')),
+
+    tsui::mdl_date(id = 'date_tm_saleOut',label = '出库日期'),
     shiny::actionButton(inputId = 'btn_saleOut_date_view_dms',label = '按日期查询'),
-    #tsui::mdl_download_button(id = 'dl_saleOut_dms',label = '下载查询数据')
+    tsui::layout_2C(x=tsui::mdl_date(id = 'date_tm_saleOut_FStartDate',label = '开始日期'),
+                    y = tsui::mdl_date(id = 'date_tm_saleOut_FEndDate',label = '结束日期')),
+    tsui::layout_2C(x=shiny::actionButton(inputId = 'btn_saleOut_dateRange_view_dms',label = '按日期范围查询'),
+                    y = tsui::mdl_download_button(id = 'dl_saleOut_dateRange_dms',label = '下载查询数据'))
+
 
   )
   return(res)

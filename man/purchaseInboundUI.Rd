@@ -5,8 +5,8 @@
 \title{purchaseInbound生成器界面}
 \usage{
 purchaseInboundUI(
-  tabTitle = "采购入库",
-  colTitles = c("数据同步", "中台查询", "显示区域"),
+  tabTitle = "采购入库同步",
+  colTitles = c("操作区域", "操作区域", "显示区域"),
   widthRates = c(6, 6, 12),
   func_left = purchaseInboundUI_left,
   func_right = purchaseInboundUI_right,

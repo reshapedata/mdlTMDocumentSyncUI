@@ -13,8 +13,8 @@
 #'
 #' @examples
 #' purchaseReturnUI()
-purchaseReturnUI <- function(tabTitle ='采购退料',
-                              colTitles =c('数据同步','中台查询','显示区域'),
+purchaseReturnUI <- function(tabTitle ='采购退料同步',
+                              colTitles =c('操作区域','操作区域','显示区域'),
                               widthRates =c(6,6,12),
                               func_left = purchaseReturnUI_left,
                               func_right =purchaseReturnUI_right,
@@ -69,11 +69,20 @@ purchaseReturnUI_left <- function() {
 purchaseReturnUI_right <- function() {
   res <- tagList(
 
+
+
+
     tsui::mdl_text2(id = 'txt_purchaseReturn_fbillno_view',label = '单据编号',value = ''),
-    shiny::actionButton(inputId = 'btn_purchaseReturn_fbillno_view_dms',label = '按单据编号查询'),
-    tsui::mdl_date(id = 'date_tm_purchaseReturn'),
+    tsui::layout_2C(x=shiny::actionButton(inputId = 'btn_purchaseReturn_fbillno_view_dms',label = '按单据编号查询'),
+                    y = tsui::mdl_download_button(id = 'dl_purchaseReturn_fbillno_dms',label = '下载查询数据')),
+
+    tsui::mdl_date(id = 'date_tm_purchaseReturn',label = '退料日期'),
     shiny::actionButton(inputId = 'btn_purchaseReturn_date_view_dms',label = '按日期查询'),
-    #tsui::mdl_download_button(id = 'dl_purchaseReturn_dms',label = '下载查询数据')
+    tsui::layout_2C(x=tsui::mdl_date(id = 'date_tm_purchaseReturn_FStartDate',label = '开始日期'),
+                    y = tsui::mdl_date(id = 'date_tm_purchaseReturn_FEndDate',label = '结束日期')),
+    tsui::layout_2C(x=shiny::actionButton(inputId = 'btn_purchaseReturn_dateRange_view_dms',label = '按日期范围查询'),
+                    y = tsui::mdl_download_button(id = 'dl_purchaseReturn_dateRange_dms',label = '下载查询数据'))
+
 
   )
   return(res)

@@ -5,8 +5,8 @@
 \title{purchaseReturn生成器界面}
 \usage{
 purchaseReturnUI(
-  tabTitle = "采购退料",
-  colTitles = c("数据同步", "中台查询", "显示区域"),
+  tabTitle = "采购退料同步",
+  colTitles = c("操作区域", "操作区域", "显示区域"),
   widthRates = c(6, 6, 12),
   func_left = purchaseReturnUI_left,
   func_right = purchaseReturnUI_right,
