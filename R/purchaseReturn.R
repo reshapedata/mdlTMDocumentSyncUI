@@ -76,7 +76,7 @@ purchaseReturnUI_right <- function() {
     tsui::layout_2C(x=shiny::actionButton(inputId = 'btn_purchaseReturn_fbillno_view_dms',label = '按单据编号查询'),
                     y = tsui::mdl_download_button(id = 'dl_purchaseReturn_fbillno_dms',label = '下载查询数据')),
 
-    tsui::mdl_date(id = 'date_tm_purchaseReturn',label = '退料日期'),
+    tsui::mdl_date(id = 'date_tm_purchaseReturn',label = '出库日期'),
     shiny::actionButton(inputId = 'btn_purchaseReturn_date_view_dms',label = '按日期查询'),
     tsui::layout_2C(x=tsui::mdl_date(id = 'date_tm_purchaseReturn_FStartDate',label = '开始日期'),
                     y = tsui::mdl_date(id = 'date_tm_purchaseReturn_FEndDate',label = '结束日期')),

@@ -15,3 +15,27 @@ Collate:
     'saleReturn.R'
     'purchaseInbound.R'
     'purchaseReturn.R'
+    'productWarehousing.R'
+    'prd_pickmtr.R'
+    'prd_pickmtrl_waste.R'
+    'stk_miscellaneous_waste.R'
+    'directTransfer.R'
+    'otherOutbound.R'
+    'otherInbound.R'
+    'stk_miscellaneous_crush.R'
+    'stk_misdelivery_crush.R'
+    'stk_dismantling.R'
+    'stk_assembly.R'
+    'stk_misdelivery_watste.R'
+    'stk_misdelivery_sal.R'
+    'stk_miscellaneous_sal.R'
+    'stk_miscellaneous_std.R'
+    'stk_misdelivery_std.R'
+    'rpd_returnstock.R'
+    'stk_stktransferin_std.R'
+    'stk_stktransferin_material.R'
+    'stk_stktransferin_others.R'
+    
+    
+    
+    

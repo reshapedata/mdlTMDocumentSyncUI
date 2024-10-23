@@ -76,7 +76,7 @@ saleReturnUI_right <- function() {
     tsui::layout_2C(x=shiny::actionButton(inputId = 'btn_saleReturn_fbillno_view_dms',label = '按单据编号查询'),
                     y = tsui::mdl_download_button(id = 'dl_saleReturn_fbillno_dms',label = '下载查询数据')),
 
-    tsui::mdl_date(id = 'date_tm_saleReturn',label = '退货日期'),
+    tsui::mdl_date(id = 'date_tm_saleReturn',label = '入库日期'),
     shiny::actionButton(inputId = 'btn_saleReturn_date_view_dms',label = '按日期查询'),
     tsui::layout_2C(x=tsui::mdl_date(id = 'date_tm_saleReturn_FStartDate',label = '开始日期'),
                     y = tsui::mdl_date(id = 'date_tm_saleReturn_FEndDate',label = '结束日期')),
